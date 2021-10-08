@@ -1,0 +1,63 @@
+Program No:1
+
+Q1).-->
+     exam@debian:~/Sales/Location2$ cat pur1.txt pur2.txt >> pur3.txt
+Q2)-->
+      exam@debian:~/Sales/Location3$ touch stock3.txt
+       exam@debian:~/Sales/Location2$ cp pur3.txt ~/Sales/Location3/stock3
+Q3)-->
+        exam@debian:~/Sales/Location3$ chmod g+rwx stock3.txt
+Q4)-->
+        exam@debian:~/Sales/Location3$ head -10 stock1.txt
+Q5)-->
+       exam@debian:/$ ls -la
+
+Program No:2
+
+echo -e"Menu 1/Sphere 2/Cube 3/Cylinder"
+read i
+case $i in
+    1)echo "enter the r"
+      read r
+      c=`expr $r \* $r \* $r`
+      k=`expr 4/3 \* 22/7 $c`
+      echo "the volume of sphere is $k"
+      ;;
+    2)echo "enter side a:"
+      read a
+      c=`expr $a \* $a \* $a`
+      echo "volume of cube is $c"
+      ;;
+    3)echo "enter r value:"
+      read r
+      echo "enter x:"
+      read x
+      c=`expr $r \* $r`
+      k=`expr 22/7 \* $c \* $x`
+      echo "volume of cylinder is $k"
+      ;;
+esac
+
+Output
+Cexam@debian:~$ bash volume.sh
+-eMenu 1/Sphere 2/Cube 3/Cylinder
+1
+enter the r
+5
+expr: non-integer argument
+the volume of sphere is 
+exam@debian:~$ bash volume.sh
+-eMenu 1/Sphere 2/Cube 3/Cylinder
+2
+enter side a:
+5
+volume of cube is 125
+exam@debian:~$ bash volume.sh
+-eMenu 1/Sphere 2/Cube 3/Cylinder
+3
+enter r value:
+3
+enter x:
+2
+expr: non-integer argument
+volume of cylinder is 
